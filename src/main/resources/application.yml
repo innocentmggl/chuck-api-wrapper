@@ -1,0 +1,17 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: jokes-app
+  redis:
+    host: redis-server
+    port: 6379
+    timeout: 60000
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      use-key-prefix: true
+      key-prefix: library
+      time-to-live: 60000
